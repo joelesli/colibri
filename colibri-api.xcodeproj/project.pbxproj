@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */; };
+		BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB5F1FE469B700C1D7DB /* ViewController.swift */; };
+		BB74EB631FE469B700C1D7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB74EB611FE469B700C1D7DB /* Main.storyboard */; };
+		BB74EB651FE469B700C1D7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB74EB641FE469B700C1D7DB /* Assets.xcassets */; };
+		BB74EB681FE469B700C1D7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */; };
+		BB74EB731FE469B700C1D7DB /* colibri_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */; };
+		BB74EB7E1FE469B700C1D7DB /* colibri_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB74EB6F1FE469B700C1D7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB74EB521FE469B700C1D7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB74EB591FE469B700C1D7DB;
+			remoteInfo = "colibri-api";
+		};
+		BB74EB7A1FE469B700C1D7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB74EB521FE469B700C1D7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB74EB591FE469B700C1D7DB;
+			remoteInfo = "colibri-api";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB74EB5A1FE469B700C1D7DB /* colibri-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "colibri-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB74EB5F1FE469B700C1D7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB74EB621FE469B700C1D7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB74EB641FE469B700C1D7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB74EB671FE469B700C1D7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB74EB691FE469B700C1D7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB74EB6E1FE469B700C1D7DB /* colibri-apiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "colibri-apiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colibri_apiTests.swift; sourceTree = "<group>"; };
+		BB74EB741FE469B700C1D7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB74EB791FE469B700C1D7DB /* colibri-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "colibri-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colibri_apiUITests.swift; sourceTree = "<group>"; };
+		BB74EB7F1FE469B700C1D7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB74EB571FE469B700C1D7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB6B1FE469B700C1D7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB761FE469B700C1D7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB74EB511FE469B700C1D7DB = {
+			isa = PBXGroup;
+			children = (
+				BB74EB5C1FE469B700C1D7DB /* colibri-api */,
+				BB74EB711FE469B700C1D7DB /* colibri-apiTests */,
+				BB74EB7C1FE469B700C1D7DB /* colibri-apiUITests */,
+				BB74EB5B1FE469B700C1D7DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB74EB5B1FE469B700C1D7DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB5A1FE469B700C1D7DB /* colibri-api.app */,
+				BB74EB6E1FE469B700C1D7DB /* colibri-apiTests.xctest */,
+				BB74EB791FE469B700C1D7DB /* colibri-apiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB74EB5C1FE469B700C1D7DB /* colibri-api */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */,
+				BB74EB5F1FE469B700C1D7DB /* ViewController.swift */,
+				BB74EB611FE469B700C1D7DB /* Main.storyboard */,
+				BB74EB641FE469B700C1D7DB /* Assets.xcassets */,
+				BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */,
+				BB74EB691FE469B700C1D7DB /* Info.plist */,
+			);
+			path = "colibri-api";
+			sourceTree = "<group>";
+		};
+		BB74EB711FE469B700C1D7DB /* colibri-apiTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */,
+				BB74EB741FE469B700C1D7DB /* Info.plist */,
+			);
+			path = "colibri-apiTests";
+			sourceTree = "<group>";
+		};
+		BB74EB7C1FE469B700C1D7DB /* colibri-apiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */,
+				BB74EB7F1FE469B700C1D7DB /* Info.plist */,
+			);
+			path = "colibri-apiUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB74EB591FE469B700C1D7DB /* colibri-api */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB74EB821FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-api" */;
+			buildPhases = (
+				BB74EB561FE469B700C1D7DB /* Sources */,
+				BB74EB571FE469B700C1D7DB /* Frameworks */,
+				BB74EB581FE469B700C1D7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "colibri-api";
+			productName = "colibri-api";
+			productReference = BB74EB5A1FE469B700C1D7DB /* colibri-api.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB74EB6D1FE469B700C1D7DB /* colibri-apiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB74EB851FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiTests" */;
+			buildPhases = (
+				BB74EB6A1FE469B700C1D7DB /* Sources */,
+				BB74EB6B1FE469B700C1D7DB /* Frameworks */,
+				BB74EB6C1FE469B700C1D7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB74EB701FE469B700C1D7DB /* PBXTargetDependency */,
+			);
+			name = "colibri-apiTests";
+			productName = "colibri-apiTests";
+			productReference = BB74EB6E1FE469B700C1D7DB /* colibri-apiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB74EB781FE469B700C1D7DB /* colibri-apiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB74EB881FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiUITests" */;
+			buildPhases = (
+				BB74EB751FE469B700C1D7DB /* Sources */,
+				BB74EB761FE469B700C1D7DB /* Frameworks */,
+				BB74EB771FE469B700C1D7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB74EB7B1FE469B700C1D7DB /* PBXTargetDependency */,
+			);
+			name = "colibri-apiUITests";
+			productName = "colibri-apiUITests";
+			productReference = BB74EB791FE469B700C1D7DB /* colibri-apiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB74EB521FE469B700C1D7DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = JOELESLI;
+				TargetAttributes = {
+					BB74EB591FE469B700C1D7DB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BB74EB6D1FE469B700C1D7DB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB74EB591FE469B700C1D7DB;
+					};
+					BB74EB781FE469B700C1D7DB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB74EB591FE469B700C1D7DB;
+					};
+				};
+			};
+			buildConfigurationList = BB74EB551FE469B700C1D7DB /* Build configuration list for PBXProject "colibri-api" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB74EB511FE469B700C1D7DB;
+			productRefGroup = BB74EB5B1FE469B700C1D7DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB74EB591FE469B700C1D7DB /* colibri-api */,
+				BB74EB6D1FE469B700C1D7DB /* colibri-apiTests */,
+				BB74EB781FE469B700C1D7DB /* colibri-apiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB74EB581FE469B700C1D7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB74EB681FE469B700C1D7DB /* LaunchScreen.storyboard in Resources */,
+				BB74EB651FE469B700C1D7DB /* Assets.xcassets in Resources */,
+				BB74EB631FE469B700C1D7DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB6C1FE469B700C1D7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB771FE469B700C1D7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB74EB561FE469B700C1D7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
+				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB6A1FE469B700C1D7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB74EB731FE469B700C1D7DB /* colibri_apiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB74EB751FE469B700C1D7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB74EB7E1FE469B700C1D7DB /* colibri_apiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB74EB701FE469B700C1D7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB74EB591FE469B700C1D7DB /* colibri-api */;
+			targetProxy = BB74EB6F1FE469B700C1D7DB /* PBXContainerItemProxy */;
+		};
+		BB74EB7B1FE469B700C1D7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB74EB591FE469B700C1D7DB /* colibri-api */;
+			targetProxy = BB74EB7A1FE469B700C1D7DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB74EB611FE469B700C1D7DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB74EB621FE469B700C1D7DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB74EB671FE469B700C1D7DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB74EB801FE469B800C1D7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB74EB811FE469B800C1D7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB74EB831FE469B800C1D7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-api/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-api";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB74EB841FE469B800C1D7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-api/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-api";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB74EB861FE469B800C1D7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-apiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-apiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/colibri-api.app/colibri-api";
+			};
+			name = Debug;
+		};
+		BB74EB871FE469B800C1D7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-apiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-apiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/colibri-api.app/colibri-api";
+			};
+			name = Release;
+		};
+		BB74EB891FE469B800C1D7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-apiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-apiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "colibri-api";
+			};
+			name = Debug;
+		};
+		BB74EB8A1FE469B800C1D7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53SCFHP556;
+				INFOPLIST_FILE = "colibri-apiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-apiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "colibri-api";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB74EB551FE469B700C1D7DB /* Build configuration list for PBXProject "colibri-api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB74EB801FE469B800C1D7DB /* Debug */,
+				BB74EB811FE469B800C1D7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB74EB821FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB74EB831FE469B800C1D7DB /* Debug */,
+				BB74EB841FE469B800C1D7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB74EB851FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB74EB861FE469B800C1D7DB /* Debug */,
+				BB74EB871FE469B800C1D7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB74EB881FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB74EB891FE469B800C1D7DB /* Debug */,
+				BB74EB8A1FE469B800C1D7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB74EB521FE469B700C1D7DB /* Project object */;
+}
