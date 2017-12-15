@@ -14,6 +14,7 @@
 		BB74EB681FE469B700C1D7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */; };
 		BB74EB731FE469B700C1D7DB /* colibri_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */; };
 		BB74EB7E1FE469B700C1D7DB /* colibri_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */; };
+		BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BB74EB791FE469B700C1D7DB /* colibri-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "colibri-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colibri_apiUITests.swift; sourceTree = "<group>"; };
 		BB74EB7F1FE469B700C1D7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColibriModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BB74EB641FE469B700C1D7DB /* Assets.xcassets */,
 				BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */,
 				BB74EB691FE469B700C1D7DB /* Info.plist */,
+				BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */,
 			);
 			path = "colibri-api";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
 				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
+				BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
