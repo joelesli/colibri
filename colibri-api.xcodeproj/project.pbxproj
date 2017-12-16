@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D7E5517EEC4E3BB66D2F88 /* Pods_colibri_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E54954A26A527FB259D400 /* Pods_colibri_api.framework */; };
+		5B8DFF258CB4E502893CE4F2 /* Pods_colibri_apiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D426563F2B293C1485B72A8 /* Pods_colibri_apiUITests.framework */; };
 		BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */; };
 		BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB5F1FE469B700C1D7DB /* ViewController.swift */; };
 		BB74EB631FE469B700C1D7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB74EB611FE469B700C1D7DB /* Main.storyboard */; };
@@ -15,6 +17,9 @@
 		BB74EB731FE469B700C1D7DB /* colibri_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */; };
 		BB74EB7E1FE469B700C1D7DB /* colibri_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */; };
 		BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */; };
+		BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB8E1FE4957700C1D7DB /* NetworkHelper.swift */; };
+		BB74EB911FE496D300C1D7DB /* NetworkHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */; };
+		BBF3ABEE8EB4E2FDAF061F77 /* Pods_colibri_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0841D072CBB4A539621FFABC /* Pods-colibri-apiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-apiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-apiTests/Pods-colibri-apiTests.release.xcconfig"; sourceTree = "<group>"; };
+		09ECE8DF6B5844835358F36D /* Pods-colibri-apiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-apiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-apiUITests/Pods-colibri-apiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3CFD6493F7E02E6ECE17B826 /* Pods-colibri-apiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-apiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-apiUITests/Pods-colibri-apiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D426563F2B293C1485B72A8 /* Pods_colibri_apiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_apiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D691F6623EC3EE04FE77911 /* Pods-colibri-api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-api.debug.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-api/Pods-colibri-api.debug.xcconfig"; sourceTree = "<group>"; };
+		63E54954A26A527FB259D400 /* Pods_colibri_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9262AA4041690629AA68F511 /* Pods-colibri-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-api.release.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-api/Pods-colibri-api.release.xcconfig"; sourceTree = "<group>"; };
+		AFD12C03C42D70C930BFDCA3 /* Pods-colibri-apiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-colibri-apiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-colibri-apiTests/Pods-colibri-apiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB74EB5A1FE469B700C1D7DB /* colibri-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "colibri-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB74EB5F1FE469B700C1D7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		BB74EB7D1FE469B700C1D7DB /* colibri_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colibri_apiUITests.swift; sourceTree = "<group>"; };
 		BB74EB7F1FE469B700C1D7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColibriModels.swift; sourceTree = "<group>"; };
+		BB74EB8E1FE4957700C1D7DB /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelperTests.swift; sourceTree = "<group>"; };
+		C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D7E5517EEC4E3BB66D2F88 /* Pods_colibri_api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF3ABEE8EB4E2FDAF061F77 /* Pods_colibri_apiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8DFF258CB4E502893CE4F2 /* Pods_colibri_apiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DA4D465810F6F486966D97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D691F6623EC3EE04FE77911 /* Pods-colibri-api.debug.xcconfig */,
+				9262AA4041690629AA68F511 /* Pods-colibri-api.release.xcconfig */,
+				AFD12C03C42D70C930BFDCA3 /* Pods-colibri-apiTests.debug.xcconfig */,
+				0841D072CBB4A539621FFABC /* Pods-colibri-apiTests.release.xcconfig */,
+				3CFD6493F7E02E6ECE17B826 /* Pods-colibri-apiUITests.debug.xcconfig */,
+				09ECE8DF6B5844835358F36D /* Pods-colibri-apiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2437D288F8C1B77ED0F3FE69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E54954A26A527FB259D400 /* Pods_colibri_api.framework */,
+				C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */,
+				3D426563F2B293C1485B72A8 /* Pods_colibri_apiUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB74EB511FE469B700C1D7DB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				BB74EB711FE469B700C1D7DB /* colibri-apiTests */,
 				BB74EB7C1FE469B700C1D7DB /* colibri-apiUITests */,
 				BB74EB5B1FE469B700C1D7DB /* Products */,
+				01DA4D465810F6F486966D97 /* Pods */,
+				2437D288F8C1B77ED0F3FE69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +149,8 @@
 				BB74EB641FE469B700C1D7DB /* Assets.xcassets */,
 				BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */,
 				BB74EB691FE469B700C1D7DB /* Info.plist */,
-				BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */,
+				BB74EB8D1FE4942C00C1D7DB /* Model */,
+				BB74EB8E1FE4957700C1D7DB /* NetworkHelper.swift */,
 			);
 			path = "colibri-api";
 			sourceTree = "<group>";
@@ -115,6 +160,7 @@
 			children = (
 				BB74EB721FE469B700C1D7DB /* colibri_apiTests.swift */,
 				BB74EB741FE469B700C1D7DB /* Info.plist */,
+				BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */,
 			);
 			path = "colibri-apiTests";
 			sourceTree = "<group>";
@@ -128,6 +174,14 @@
 			path = "colibri-apiUITests";
 			sourceTree = "<group>";
 		};
+		BB74EB8D1FE4942C00C1D7DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB74EB821FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-api" */;
 			buildPhases = (
+				38EC23CEEA04C746F8B1FDE2 /* [CP] Check Pods Manifest.lock */,
 				BB74EB561FE469B700C1D7DB /* Sources */,
 				BB74EB571FE469B700C1D7DB /* Frameworks */,
 				BB74EB581FE469B700C1D7DB /* Resources */,
+				7F62F4A58EA4901ECFC5F78F /* [CP] Embed Pods Frameworks */,
+				34C2225B2C4FF9D098C00060 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB74EB851FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiTests" */;
 			buildPhases = (
+				FAC40778107C55CD813889E7 /* [CP] Check Pods Manifest.lock */,
 				BB74EB6A1FE469B700C1D7DB /* Sources */,
 				BB74EB6B1FE469B700C1D7DB /* Frameworks */,
 				BB74EB6C1FE469B700C1D7DB /* Resources */,
+				9A58BBCB7E6C372495075F4F /* [CP] Embed Pods Frameworks */,
+				1E05148F1FC9ED70FFD4197A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB74EB881FE469B800C1D7DB /* Build configuration list for PBXNativeTarget "colibri-apiUITests" */;
 			buildPhases = (
+				3F377228BEA68E8419845ADC /* [CP] Check Pods Manifest.lock */,
 				BB74EB751FE469B700C1D7DB /* Sources */,
 				BB74EB761FE469B700C1D7DB /* Frameworks */,
 				BB74EB771FE469B700C1D7DB /* Resources */,
+				6B78BAD24D06A45E3C1E15CF /* [CP] Embed Pods Frameworks */,
+				4421A808C092C9F54EFB68F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,11 +320,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E05148F1FC9ED70FFD4197A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-apiTests/Pods-colibri-apiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34C2225B2C4FF9D098C00060 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-api/Pods-colibri-api-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38EC23CEEA04C746F8B1FDE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-colibri-api-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F377228BEA68E8419845ADC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-colibri-apiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4421A808C092C9F54EFB68F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-apiUITests/Pods-colibri-apiUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B78BAD24D06A45E3C1E15CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-apiUITests/Pods-colibri-apiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F62F4A58EA4901ECFC5F78F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-colibri-api/Pods-colibri-api-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-api/Pods-colibri-api-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A58BBCB7E6C372495075F4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-colibri-apiTests/Pods-colibri-apiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC40778107C55CD813889E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-colibri-apiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB74EB561FE469B700C1D7DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */,
 				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
 				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
 				BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */,
@@ -272,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB74EB911FE496D300C1D7DB /* NetworkHelperTests.swift in Sources */,
 				BB74EB731FE469B700C1D7DB /* colibri_apiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +643,7 @@
 		};
 		BB74EB831FE469B800C1D7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D691F6623EC3EE04FE77911 /* Pods-colibri-api.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +659,7 @@
 		};
 		BB74EB841FE469B800C1D7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9262AA4041690629AA68F511 /* Pods-colibri-api.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +675,7 @@
 		};
 		BB74EB861FE469B800C1D7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD12C03C42D70C930BFDCA3 /* Pods-colibri-apiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +693,7 @@
 		};
 		BB74EB871FE469B800C1D7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0841D072CBB4A539621FFABC /* Pods-colibri-apiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +711,7 @@
 		};
 		BB74EB891FE469B800C1D7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CFD6493F7E02E6ECE17B826 /* Pods-colibri-apiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +728,7 @@
 		};
 		BB74EB8A1FE469B800C1D7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09ECE8DF6B5844835358F36D /* Pods-colibri-apiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

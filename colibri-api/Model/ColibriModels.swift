@@ -8,43 +8,7 @@
 
 import Foundation
 
-static let colibriAPIURL : String = "http://hackathon.colibri-labs.de/api/db/1/"
 
-/// <#Description#>
-///
-/// - operators: List of organisation units / customers that use the colibri project.
-/// - modelTypes: List of model series of trains and station panels within colibri.
-/// - vehicleTypes: List of vehicle types (train, bus, car, panel)
-/// - pcTypes: List PC Types. (Moving of stationary)
-/// - simprovider: List of ISPs for the colibri systems.
-/// - stations: List of stations with gps position.
-enum ColibriEndpointsBaseData : String {
-    case operators
-    case modelTypes
-    case vehicleTypes
-    case pcTypes
-    case simprovider
-    case stations
-}
-
-/// <#Description#>
-///
-/// - trainSchedule: Get the train schedule of the specified tour at the given time (day). (including delay times)
-/// - systems: List of colibri systems with GPS position, base data ...
-/// - system: <#system description#>
-/// - gpsHistory: <#gpsHistory description#>
-/// - sensors: <#sensors description#>
-/// - diagnose: <#diagnose description#>
-/// - afz: <#afz description#>
-enum ColibriEndpointsSpecificData : String {
-    case trainSchedule
-    case systems
-    case system
-    case gpsHistory
-    case sensors
-    case diagnose
-    case afz
-}
 
 
 /// Organisation unit that use the colibri project.
