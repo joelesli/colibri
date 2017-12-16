@@ -11,7 +11,7 @@ import Alamofire
 
 public typealias NetworkResultsBlock = ([Any]) -> Void
 
-class NetworkHelper : NSObject {
+public class NetworkHelper : NSObject {
     
     let colibriAPIURL : String = "http://hackathon.colibri-labs.de/api/db/1/"
     
@@ -51,7 +51,7 @@ class NetworkHelper : NSObject {
         case afz
     }
     
-    func get(endpoint: String, parameters: Parameters, callback: @escaping NetworkResultsBlock) {
+    public func get(endpoint: String, parameters: Parameters, callback: @escaping NetworkResultsBlock) {
         
         let urlString = colibriAPIURL + endpoint + ".json"
         if let url = URL(string: urlString) {
@@ -69,7 +69,7 @@ class NetworkHelper : NSObject {
         
     }
     
-    func getSystems(parameters: Parameters, callback: @escaping NetworkResultsBlock) {
+    public func getSystems(parameters: Parameters, callback: @escaping NetworkResultsBlock) {
         
         get(endpoint: ColibriEndpointsSpecificData.systems.rawValue, parameters: parameters) { (response) in
             
@@ -93,24 +93,5 @@ class NetworkHelper : NSObject {
         }
         
     }
-
-        
-//        Alamofire.request(colibriAPIURL + ColibriEndpointsSpecificData.systems.rawValue + ".json" + "?" + "params={'vehicleType':'Zug'}").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-//            
-//            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-//                callBack([json])
-//            }
-//            
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//                callBack([utf8Text])
-//            }
-//            
-//        }
-//    }
     
 }

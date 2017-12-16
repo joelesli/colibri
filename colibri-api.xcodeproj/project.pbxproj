@@ -21,6 +21,10 @@
 		BB74EB911FE496D300C1D7DB /* NetworkHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */; };
 		BB74EB931FE4B47100C1D7DB /* SystemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */; };
 		BB74EB961FE4B75C00C1D7DB /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB951FE4B75C00C1D7DB /* Systems.swift */; };
+		BB74EB981FE5126900C1D7DB /* TrainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB971FE5126900C1D7DB /* TrainHelper.swift */; };
+		BB74EB9A1FE5129C00C1D7DB /* SystemsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */; };
+		BBA861541FE5163300CD5040 /* TrainsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */; };
+		BBA861561FE5165100CD5040 /* ColibriTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */; };
 		BBF3ABEE8EB4E2FDAF061F77 /* Pods_colibri_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelperTests.swift; sourceTree = "<group>"; };
 		BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsTableViewController.swift; sourceTree = "<group>"; };
 		BB74EB951FE4B75C00C1D7DB /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
+		BB74EB971FE5126900C1D7DB /* TrainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHelper.swift; sourceTree = "<group>"; };
+		BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsHelper.swift; sourceTree = "<group>"; };
+		BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsTableViewController.swift; sourceTree = "<group>"; };
+		BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColibriTableViewController.swift; sourceTree = "<group>"; };
 		C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,6 +191,8 @@
 			children = (
 				BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */,
 				BB74EB951FE4B75C00C1D7DB /* Systems.swift */,
+				BB74EB971FE5126900C1D7DB /* TrainHelper.swift */,
+				BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +202,8 @@
 			children = (
 				BB74EB5F1FE469B700C1D7DB /* ViewController.swift */,
 				BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */,
+				BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */,
+				BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -491,9 +503,13 @@
 			files = (
 				BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */,
 				BB74EB931FE4B47100C1D7DB /* SystemsTableViewController.swift in Sources */,
+				BBA861561FE5165100CD5040 /* ColibriTableViewController.swift in Sources */,
+				BBA861541FE5163300CD5040 /* TrainsTableViewController.swift in Sources */,
 				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
+				BB74EB981FE5126900C1D7DB /* TrainHelper.swift in Sources */,
 				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
 				BB74EB961FE4B75C00C1D7DB /* Systems.swift in Sources */,
+				BB74EB9A1FE5129C00C1D7DB /* SystemsHelper.swift in Sources */,
 				BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
