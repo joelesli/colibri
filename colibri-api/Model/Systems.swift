@@ -8,20 +8,30 @@
 
 import Foundation
 
-struct Train : Codable, TableItem {
+public struct Train : Codable, TableItem {
     
     let trainNumber : Int?
     var systems : [System]?
     
-    var cellTitle: String? {
+    public var cellTitle: String? {
         get {
             return trainNumber == nil ? nil : "Train number: \(trainNumber!)"
         }
     }
     
-    var cellSubtitle : String? {
+    public var cellSubtitle : String? {
         get {
             return systems == nil ? nil : "Systems: \(systems!.count)"
+        }
+    }
+    
+    public var tableItems : [TableItem]? {
+        get {
+            return systems
+        }
+        
+        set {
+            systems = newValue as? [System]
         }
     }
     
@@ -29,7 +39,7 @@ struct Train : Codable, TableItem {
 
 /// List of colibri systems with GPS position, base data ...
 /// /api/db/1/systems.json?params={"operatorId":8,"pcType":1,"modelType":"R 187.9","vehicleType":"Zug"}
-struct System : Codable, TableItem {
+public struct System : Codable, TableItem {
     
     /*
      {
@@ -99,15 +109,25 @@ struct System : Codable, TableItem {
         case pcTypeId
     }
     
-    var cellTitle: String? {
+    public var cellTitle: String? {
         get {
-            return name
+            return mac != nil ? "Mac: " + mac! : nil
         }
     }
     
-    var cellSubtitle : String? {
+    public var cellSubtitle : String? {
         get {
-            return "\(trainNumber ?? 0)"
+            return modelType != nil ? "Model type: " + modelType! : nil
+        }
+    }
+    
+    public var tableItems : [TableItem]? {
+        get {
+            return nil
+        }
+        
+        set {
+            //TODO
         }
     }
     

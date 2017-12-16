@@ -8,14 +8,19 @@
 
 import UIKit
 
+public enum Storyboard : String {
+    case main = "Main"
+}
+
 public struct TableSection {
-    var sectionTitle : String
+    var sectionTitle : String?
     var tableItems : [TableItem]
 }
 
 public protocol TableItem {
     var cellTitle : String? { get }
     var cellSubtitle : String? { get }
+    var tableItems : [TableItem]? { get set }
 }
 
 public class ColibriTableViewController: UITableViewController {
@@ -59,59 +64,32 @@ public class ColibriTableViewController: UITableViewController {
         if let item = tableSections?[indexPath.section].tableItems[indexPath.row] {
             cell.textLabel?.text = item.cellTitle
             cell.detailTextLabel?.text = item.cellSubtitle
+            cell.accessoryType = item.tableItems == nil ? .none : .disclosureIndicator
         }
         
         return cell
     }
     
     override public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableSections?[section].sectionTitle ?? ""
+        return tableSections?[section].sectionTitle
     }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let item = tableSections?[indexPath.section].tableItems[indexPath.row], let subItems = item.tableItems,
+            let controller = controllerFor(item: item, withSubitems: subItems) {
+            navigationController?.pushViewController(controller, animated: true)
+        }
+        else {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+    }
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Helper methods for view controller hierarchy
+    public func controllerFor(item: TableItem, withSubitems items: [TableItem]) -> UIViewController? {
+        return nil
+    }
     
     // MARK: - Fetch objects
     
@@ -130,5 +108,20 @@ public class ColibriTableViewController: UITableViewController {
         }
         
     }
+    
 
+}
+
+extension UIViewController {
+    
+    class open func controllerFrom(storyboard name: Storyboard, inBundle bundle: Bundle?) -> UIViewController? {
+        let aStoryboard = UIStoryboard(name: name.rawValue, bundle: bundle)
+        print("Controller with identifier: \(String(describing: self))")
+        return aStoryboard.instantiateViewController(withIdentifier: String(describing: self))
+    }
+    
+    class open func controller() -> UIViewController? {
+        return self.controllerFrom(storyboard: .main, inBundle: nil)
+    }
+    
 }

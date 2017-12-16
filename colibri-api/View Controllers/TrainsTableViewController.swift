@@ -26,7 +26,15 @@ class TrainsTableViewController: ColibriTableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    // MARK: - Helper methods for view controller hierarchy
+    override public func controllerFor(item: TableItem, withSubitems items: [TableItem]) -> UIViewController? {
+        let controller = SystemsTableViewController.controller() as! SystemsTableViewController
+        let train = item as! Train
+        controller.title =  train.trainNumber != nil ? "Systems (\(train.trainNumber!))" : nil
+        let section = TableSection(sectionTitle: nil, tableItems: items)
+        controller.tableSections = [section]
+        return controller
+    }
     
     override open func fetchObjects() {
         

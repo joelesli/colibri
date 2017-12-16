@@ -16,8 +16,9 @@ class SystemsTableViewController: ColibriTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Systems"
-        
+        if title == nil {
+            title = "Systems"
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
