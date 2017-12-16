@@ -8,6 +8,25 @@
 
 import Foundation
 
+struct Train : Codable, TableItem {
+    
+    let trainNumber : Int?
+    var systems : [System]?
+    
+    var cellTitle: String? {
+        get {
+            return trainNumber == nil ? nil : "Train number: \(trainNumber!)"
+        }
+    }
+    
+    var cellSubtitle : String? {
+        get {
+            return systems == nil ? nil : "Systems: \(systems!.count)"
+        }
+    }
+    
+}
+
 /// List of colibri systems with GPS position, base data ...
 /// /api/db/1/systems.json?params={"operatorId":8,"pcType":1,"modelType":"R 187.9","vehicleType":"Zug"}
 struct System : Codable, TableItem {

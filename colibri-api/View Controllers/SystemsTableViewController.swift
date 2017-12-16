@@ -133,33 +133,68 @@ class SystemsTableViewController: UITableViewController {
                 })
                 
                 systems.sort(by: { (system01, system02) -> Bool in
-                    return system01.operatorName ?? "" < system02.operatorName ?? ""
+                    return system01.trainNumber ?? 0 < system02.trainNumber ?? 0
+                })
+                
+                //create trains from the systems
+                var trains = [Train]()
+                for aSystem in systems {
+                    
+                    if let lastTrain = trains.last, lastTrain.trainNumber == aSystem.trainNumber {
+                        var train = lastTrain
+                        train.systems?.append(aSystem)
+                        trains.removeLast()
+                        trains.append(train)
+                    }
+                    //handles the no train case and the new train case
+                    else {
+                        let train = Train(trainNumber: aSystem.trainNumber!, systems: [aSystem])
+                        trains.append(train)
+                    }
+                    
+                }
+                
+                //sort the trains
+                trains.sort(by: { (train01, train02) -> Bool in
+                    train01.systems?.last?.operatorName ?? "" < train02.systems?.last?.operatorName ?? ""
                 })
                 
                 var sections = [TableSection]()
                 
-                for aSystem in systems {
+                for train in trains {
                     
-                    if sections.count == 0 {
-                        let section = TableSection(sectionTitle: aSystem.operatorName ?? "", tableItems: [aSystem])
-                        sections.append(section)
-                    }
-                    else if let last = sections.last, last.sectionTitle == aSystem.operatorName {
+                    if let last = sections.last, last.sectionTitle == train.systems?.last?.operatorName {
                         var section = last
-                        section.tableItems.append(aSystem)
+                        section.tableItems.append(train)
                         sections.removeLast()
                         sections.append(section)
                     }
+                        //handles the empty case and the adding a new section case
                     else {
-                        let section = TableSection(sectionTitle: aSystem.operatorName ?? "", tableItems: [aSystem])
+                        let section = TableSection(sectionTitle: train.systems?.last?.operatorName ?? "", tableItems: [train])
                         sections.append(section)
                     }
                     
                 }
                 
+                //sort the trains within their sections
+                var finalSections = [TableSection]()
+                for aSection in sections {
+                    if let trains = aSection.tableItems as? [Train] {
+                        var tr = trains
+                        tr.sort(by: { (train01, train02) -> Bool in
+                            return train01.trainNumber ?? 0 < train02.trainNumber ?? 0
+                        })
+                        
+                        finalSections.append(TableSection(sectionTitle: aSection.sectionTitle, tableItems: tr))
+                    }
+                }
+                
+                
+                
                 DispatchQueue.main.async {
                     
-                    self.tableSections = sections
+                    self.tableSections = finalSections
                     self.tableView.reloadData()
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }

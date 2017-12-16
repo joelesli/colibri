@@ -369,7 +369,7 @@ struct LoadCount : Codable {
     let time : Int //1512947105,
     let passengers : Int // -4,
     let bikes : Int //0
-    var sensors : [Sensor]?
+    var sensors : [LoadSensor]?
     /*
      {
      "app_version": "1.00",
