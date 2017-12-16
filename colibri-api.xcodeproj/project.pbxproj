@@ -19,6 +19,8 @@
 		BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */; };
 		BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB8E1FE4957700C1D7DB /* NetworkHelper.swift */; };
 		BB74EB911FE496D300C1D7DB /* NetworkHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */; };
+		BB74EB931FE4B47100C1D7DB /* SystemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */; };
+		BB74EB961FE4B75C00C1D7DB /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB951FE4B75C00C1D7DB /* Systems.swift */; };
 		BBF3ABEE8EB4E2FDAF061F77 /* Pods_colibri_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColibriModels.swift; sourceTree = "<group>"; };
 		BB74EB8E1FE4957700C1D7DB /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		BB74EB901FE496D300C1D7DB /* NetworkHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelperTests.swift; sourceTree = "<group>"; };
+		BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsTableViewController.swift; sourceTree = "<group>"; };
+		BB74EB951FE4B75C00C1D7DB /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
 		C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				BB74EB5D1FE469B700C1D7DB /* AppDelegate.swift */,
-				BB74EB5F1FE469B700C1D7DB /* ViewController.swift */,
+				BB74EB941FE4B47900C1D7DB /* View Controllers */,
 				BB74EB611FE469B700C1D7DB /* Main.storyboard */,
 				BB74EB641FE469B700C1D7DB /* Assets.xcassets */,
 				BB74EB661FE469B700C1D7DB /* LaunchScreen.storyboard */,
@@ -178,8 +182,18 @@
 			isa = PBXGroup;
 			children = (
 				BB74EB8B1FE469D900C1D7DB /* ColibriModels.swift */,
+				BB74EB951FE4B75C00C1D7DB /* Systems.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BB74EB941FE4B47900C1D7DB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB74EB5F1FE469B700C1D7DB /* ViewController.swift */,
+				BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,8 +490,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */,
+				BB74EB931FE4B47100C1D7DB /* SystemsTableViewController.swift in Sources */,
 				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
 				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
+				BB74EB961FE4B75C00C1D7DB /* Systems.swift in Sources */,
 				BB74EB8C1FE469D900C1D7DB /* ColibriModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
