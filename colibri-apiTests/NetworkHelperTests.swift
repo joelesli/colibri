@@ -11,6 +11,8 @@ import XCTest
 
 class NetworkHelperTests: XCTestCase {
     
+    let netHelper = NetworkHelper()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -35,14 +37,30 @@ class NetworkHelperTests: XCTestCase {
     
     func testGetSystems() {
         
-        weak var expectation =  self.expectation(description: "Systes received")
+        weak var expectation =  self.expectation(description: "Systems received")
         
-        let netHelper = NetworkHelper()
         netHelper.getSystems(parameters: [:]) { (results) in
+            XCTAssertTrue(results.count > 0)
             expectation?.fulfill()
         }
         
         self.waitForExpectations(timeout: 5) { (error) -> Void in
+            XCTAssert(error == nil, "Error: \(error ?? NSError())")
+        }
+    }
+    
+    func testGetGPSHistory() {
+        
+        weak var expectation =  self.expectation(description: "GPS History fetched")
+        
+        netHelper.getGPSHistory(parameters: ["mac":"00:c0:3a:c9:84:da"]) { (results) in
+            dump(results)
+            XCTAssertNotNil(results.first as? GPSHistory)
+            XCTAssertTrue(results.count > 0)
+            expectation?.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 20) { (error) -> Void in
             XCTAssert(error == nil, "Error: \(error ?? NSError())")
         }
     }

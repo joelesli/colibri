@@ -69,6 +69,21 @@ public class NetworkHelper : NSObject {
         
     }
     
+    public func get(urlString: String, callback: @escaping NetworkResultsBlock) {
+        //http://hackathon.colibri-labs.de/api/db/1/gpsHistory.json?params=%7B%22mac%22%3A%2200%3Ac0%3A3a%3Ac9%3A84%3Ada%22%7D
+        //http://hackathon.colibri-labs.de/api/db/1/gpsHistory?params=%7B%22mac%22:%2200:c0:3a:c9:84:da%22%7D
+        if let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
+            Alamofire.request(url)
+                .validate(statusCode: 200..<300)
+                .validate(contentType: ["application/json"])
+                .responseString(completionHandler: { (response) in
+                    callback([response.result.value ?? ""])
+                })
+            
+        }
+        
+    }
+    
     public func getSystems(parameters: Parameters, callback: @escaping NetworkResultsBlock) {
         
         get(endpoint: ColibriEndpointsSpecificData.systems.rawValue, parameters: parameters) { (response) in
@@ -87,11 +102,58 @@ public class NetworkHelper : NSObject {
                 callback(objects)
             } catch let error {
                 print(error)
-                callback([""])
+                callback([])
             }
             
         }
         
     }
+    
+    public func getGPSHistory(parameters: Parameters, callback: @escaping NetworkResultsBlock) {
+        
+        let urlString = colibriAPIURL + ColibriEndpointsSpecificData.gpsHistory.rawValue + ".json?params={\"mac\":\"" + (parameters["mac"]! as! String) + "\"}"
+        
+        get(urlString: urlString, callback: { (response) in
+            
+            guard let jsonString = response.first as? String else {
+                callback([])
+                return
+            }
+            
+            do {
+                let jsonData = jsonString.data(using: .utf8)!
+                let decoder = JSONDecoder()
+                let objects = try decoder.decode([GPSData].self, from: jsonData)
+                let history = GPSHistory(history: objects)
+                callback([history])
+            } catch let error {
+                print(error)
+                callback([])
+            }
+        })
+        
+//        get(endpoint: ColibriEndpointsSpecificData.gpsHistory.rawValue, parameters: parameters) { (response) in
+//            
+//            guard let jsonString = response.first as? String else {
+//                callback([])
+//                return
+//            }
+//            
+//            do {
+//                let jsonData = jsonString.data(using: .utf8)!
+//                let decoder = JSONDecoder()
+//                let objects = try decoder.decode([GPSData].self, from: jsonData)
+//                let history = GPSHistory(history: objects)
+//                callback([history])
+//            } catch let error {
+//                print(error)
+//                callback([])
+//            }
+//            
+//        }
+        
+    }
+    
+    
     
 }

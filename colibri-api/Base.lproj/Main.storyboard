@@ -133,5 +133,59 @@
             </objects>
             <point key="canvasLocation" x="2398" y="133"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="SmX-LA-ToD">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Jl0-D1-6s9" customClass="MapViewController" customModule="colibri_api" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37w-Xd-8Hb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-Xt-YYb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Jl0-D1-6s9" id="gdY-S8-SOI"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuI-Do-boQ">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9ZI-jt-Cl4">
+                                        <rect key="frame" x="18" y="9.5" width="339" height="31"/>
+                                        <connections>
+                                            <action selector="valueChanged:" destination="Jl0-D1-6s9" eventType="valueChanged" id="MwJ-Ae-gac"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L2g-bf-amp"/>
+                                    <constraint firstItem="9ZI-jt-Cl4" firstAttribute="leading" secondItem="iuI-Do-boQ" secondAttribute="leading" constant="20" id="Szf-vR-BVn"/>
+                                    <constraint firstItem="9ZI-jt-Cl4" firstAttribute="centerY" secondItem="iuI-Do-boQ" secondAttribute="centerY" id="Yo8-aW-yXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ZI-jt-Cl4" secondAttribute="trailing" constant="20" id="gnW-Me-Mzm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iuI-Do-boQ" firstAttribute="top" secondItem="tUd-Xt-YYb" secondAttribute="bottom" id="1tz-TQ-0r8"/>
+                            <constraint firstItem="iuI-Do-boQ" firstAttribute="leading" secondItem="vOn-a7-oVw" secondAttribute="leading" id="HiY-Oi-NTj"/>
+                            <constraint firstItem="tUd-Xt-YYb" firstAttribute="leading" secondItem="vOn-a7-oVw" secondAttribute="leading" id="K4S-3n-jwy"/>
+                            <constraint firstItem="iuI-Do-boQ" firstAttribute="trailing" secondItem="vOn-a7-oVw" secondAttribute="trailing" id="K98-RD-O3W"/>
+                            <constraint firstItem="tUd-Xt-YYb" firstAttribute="trailing" secondItem="vOn-a7-oVw" secondAttribute="trailing" id="eOC-fk-MkK"/>
+                            <constraint firstItem="tUd-Xt-YYb" firstAttribute="top" secondItem="37w-Xd-8Hb" secondAttribute="top" id="j9T-Ej-Aki"/>
+                            <constraint firstItem="iuI-Do-boQ" firstAttribute="bottom" secondItem="vOn-a7-oVw" secondAttribute="bottom" id="nrI-JO-Ypy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vOn-a7-oVw"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="9ZI-jt-Cl4" id="IJY-7z-IAl"/>
+                        <outlet property="viewMap" destination="tUd-Xt-YYb" id="Vcx-j3-PPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLT-5E-DnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3104.8000000000002" y="133.5832083958021"/>
+        </scene>
     </scenes>
 </document>

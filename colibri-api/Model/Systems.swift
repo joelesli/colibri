@@ -123,7 +123,7 @@ public struct System : Codable, TableItem {
     
     public var tableItems : [TableItem]? {
         get {
-            return nil
+            return [TableItem]()
         }
         
         set {
@@ -131,6 +131,36 @@ public struct System : Codable, TableItem {
         }
     }
     
+}
+
+/// Get detailed information for a specific colibri system.
+/// Best data could be retrieved from systems of operator "DB Regio SO"
+/// /api/db/1/system.json?params={"mac":"00:c0:3a:b1:d5:f2","id":7}
+struct SystemDetails : Codable {
+    /*
+     {
+     "id": 7,
+     "mac": "00:c0:3a:b1:d5:f2",
+     "name": "DB FV Versuchstr\u00e4ger BV187.9",
+     "properties": {},
+     "trainType": "IC",
+     "trainNumber": null,
+     "station": null,
+     "stationId": null,
+     "modelType": "R 187.9",
+     "modelTypeImage": "https://dbdata.colibri-w.de/images/db/modelType/Bordbistro_R187.9.jpg",
+     "pcType": "Mobil",
+     "vehicleType": "Zug",
+     "operator": "DB Fernverkehr",
+     "sims": [],
+     "jobs": [],
+     "gps": null,
+     "traffic": [],
+     "baptismHistory": [],
+     "messages": [],
+     "systemInfo": null
+     }
+     */
 }
 
 

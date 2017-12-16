@@ -12,7 +12,8 @@ import UIKit
 
 class SystemsTableViewController: ColibriTableViewController {
 
-    
+    var gpsData = [String : GPSHistory]()
+    var requestCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +32,45 @@ class SystemsTableViewController: ColibriTableViewController {
     
     // MARK: - Fetch objects
     
-    override open func fetchObjects() {
+//    override open func fetchObjects() {
+//
+//        guard let sections = tableSections else {
+//            return
+//        }
+//
+//        //fetch the GPS data
+//
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//
+//        for section in sections {
+//            if let systems = section.tableItems as? [System] {
+//
+//                for system in systems {
+//                    let parameters = ["mac" : system.mac!]
+//                    networkHelper.getGPSHistory(parameters: parameters) { (results) in
+//
+//                        DispatchQueue.main.async {
+//
+//                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//                        }
+//                    }
+//                }
+//
+//            }
+//        }
+//
+//    }
+    
+    override public func controllerFor(item: TableItem, withSubitems items: [TableItem]) -> UIViewController? {
+        var controller : UIViewController?
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        networkHelper.getSystems(parameters: [:]) { (objects) in
-            
-            DispatchQueue.main.async {
-                
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            }
-            
-            
+        if let system = item as? System {
+            let cont = MapViewController.controller() as! MapViewController
+            cont.system = system
+            controller = cont
         }
         
+        return controller
     }
 
 }

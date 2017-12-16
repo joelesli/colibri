@@ -25,6 +25,10 @@
 		BB74EB9A1FE5129C00C1D7DB /* SystemsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */; };
 		BBA861541FE5163300CD5040 /* TrainsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */; };
 		BBA861561FE5165100CD5040 /* ColibriTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */; };
+		BBA861581FE5293F00CD5040 /* GPSHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA861571FE5293F00CD5040 /* GPSHistory.swift */; };
+		BBA8615A1FE5299C00CD5040 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA861591FE5299C00CD5040 /* MapKit.framework */; };
+		BBA8615C1FE52A0800CD5040 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA8615B1FE52A0800CD5040 /* CoreLocation.framework */; };
+		BBA861601FE53C8000CD5040 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8615F1FE53C8000CD5040 /* MapViewController.swift */; };
 		BBF3ABEE8EB4E2FDAF061F77 /* Pods_colibri_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsHelper.swift; sourceTree = "<group>"; };
 		BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsTableViewController.swift; sourceTree = "<group>"; };
 		BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColibriTableViewController.swift; sourceTree = "<group>"; };
+		BBA861571FE5293F00CD5040 /* GPSHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSHistory.swift; sourceTree = "<group>"; };
+		BBA861591FE5299C00CD5040 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BBA8615B1FE52A0800CD5040 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BBA8615F1FE53C8000CD5040 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_colibri_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA8615C1FE52A0800CD5040 /* CoreLocation.framework in Frameworks */,
+				BBA8615A1FE5299C00CD5040 /* MapKit.framework in Frameworks */,
 				02D7E5517EEC4E3BB66D2F88 /* Pods_colibri_api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +133,8 @@
 		2437D288F8C1B77ED0F3FE69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBA8615B1FE52A0800CD5040 /* CoreLocation.framework */,
+				BBA861591FE5299C00CD5040 /* MapKit.framework */,
 				63E54954A26A527FB259D400 /* Pods_colibri_api.framework */,
 				C8B0C7554F7C1B63E30FCBD2 /* Pods_colibri_apiTests.framework */,
 				3D426563F2B293C1485B72A8 /* Pods_colibri_apiUITests.framework */,
@@ -193,6 +205,7 @@
 				BB74EB951FE4B75C00C1D7DB /* Systems.swift */,
 				BB74EB971FE5126900C1D7DB /* TrainHelper.swift */,
 				BB74EB991FE5129C00C1D7DB /* SystemsHelper.swift */,
+				BBA861571FE5293F00CD5040 /* GPSHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 				BB74EB921FE4B47100C1D7DB /* SystemsTableViewController.swift */,
 				BBA861531FE5163300CD5040 /* TrainsTableViewController.swift */,
 				BBA861551FE5165100CD5040 /* ColibriTableViewController.swift */,
+				BBA8615F1FE53C8000CD5040 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -502,11 +516,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB74EB8F1FE4957700C1D7DB /* NetworkHelper.swift in Sources */,
+				BBA861581FE5293F00CD5040 /* GPSHistory.swift in Sources */,
 				BB74EB931FE4B47100C1D7DB /* SystemsTableViewController.swift in Sources */,
 				BBA861561FE5165100CD5040 /* ColibriTableViewController.swift in Sources */,
 				BBA861541FE5163300CD5040 /* TrainsTableViewController.swift in Sources */,
 				BB74EB601FE469B700C1D7DB /* ViewController.swift in Sources */,
 				BB74EB981FE5126900C1D7DB /* TrainHelper.swift in Sources */,
+				BBA861601FE53C8000CD5040 /* MapViewController.swift in Sources */,
 				BB74EB5E1FE469B700C1D7DB /* AppDelegate.swift in Sources */,
 				BB74EB961FE4B75C00C1D7DB /* Systems.swift in Sources */,
 				BB74EB9A1FE5129C00C1D7DB /* SystemsHelper.swift in Sources */,
@@ -685,7 +701,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-api";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -701,7 +717,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joelesli.colibri-api";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
