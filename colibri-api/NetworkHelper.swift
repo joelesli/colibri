@@ -58,26 +58,41 @@ class NetworkHelper : NSObject {
             Alamofire.request(url, parameters: parameters)
                 .validate(statusCode: 200..<300)
                 .validate(contentType: ["application/json"])
-                .responseJSON(completionHandler: { (response) in
-                    callback([response])
+                .responseString(completionHandler: { (response) in
+                    callback([response.result.value ?? ""])
                 })
+//                .responseJSON(completionHandler: { (response) in
+//                    
+//                    callback([response])
+//                })
         }
         
     }
     
-    func getSystems(callBack: @escaping NetworkResultsBlock) {
-        //http://hackathon.colibri-labs.de/api/db/1/systems.json?params=%7B%22vehicleType%22%3A%22Zug%22%7D
-        let parameters: Parameters = ["vehicleType": "Zug"]
-        let urlString = colibriAPIURL + ColibriEndpointsSpecificData.systems.rawValue + ".json"
-        if let url = URL(string: urlString) {
-            Alamofire.request(url, parameters: parameters)
-                .validate(statusCode: 200..<300)
-                .validate(contentType: ["application/json"])
-                .responseJSON(completionHandler: { (response) in
-                    callBack([response])
-                })   
+    func getSystems(parameters: Parameters, callback: @escaping NetworkResultsBlock) {
+        
+        get(endpoint: ColibriEndpointsSpecificData.systems.rawValue, parameters: parameters) { (response) in
+            
+            guard let jsonString = response.first as? String else {
+                callback([])
+                return
+            }
+            //get the array and convert it
+            
+            do {
+                let jsonData = jsonString.data(using: .utf8)!
+                let decoder = JSONDecoder()
+                let objects = try decoder.decode([System].self, from: jsonData )
+                dump(objects)
+                callback(objects)
+            } catch let error {
+                print(error)
+                callback([""])
+            }
+            
         }
         
+    }
 
         
 //        Alamofire.request(colibriAPIURL + ColibriEndpointsSpecificData.systems.rawValue + ".json" + "?" + "params={'vehicleType':'Zug'}").responseJSON { response in
@@ -96,6 +111,6 @@ class NetworkHelper : NSObject {
 //            }
 //            
 //        }
-    }
+//    }
     
 }

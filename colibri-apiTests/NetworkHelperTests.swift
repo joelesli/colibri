@@ -38,8 +38,7 @@ class NetworkHelperTests: XCTestCase {
         weak var expectation =  self.expectation(description: "Systes received")
         
         let netHelper = NetworkHelper()
-        netHelper.getSystems { (results) in
-            print(results)
+        netHelper.getSystems(parameters: [:]) { (results) in
             expectation?.fulfill()
         }
         

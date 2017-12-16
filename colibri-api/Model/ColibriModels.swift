@@ -171,26 +171,48 @@ struct System : Codable {
      */
     
     
-    let mac : String
-    let name : String
-    var lastCall : String
-    let id : Int
-    let lat : Double
-    let lng : Double
-    let operatorName : String //TODO need to make codable because the attribute name is operator
-    let operatorId : Int
-    let trainType : String
+    let mac : String?
+    let name : String?
+    var lastCall : Int?
+    let id : Int?
+    let lat : Double?
+    let lng : Double?
+    let operatorName : String? //TODO need to make codable because the attribute name is operator
+    let operatorId : Int?
+    let trainType : String?
     /// Must be > 0 to be a valid train
     var trainNumber : Int?
-    let station : String
+    let station : String?
     let stationId : Int?
-    let modelType : String
-    let modelTypeImage : String
-    let modelTypeId : Int
-    let vehicleType : String
-    let vehicleTypeId : Int
-    let pcType : String
-    let pcTypeId : String
+    let modelType : String?
+    let modelTypeImage : String?
+    let modelTypeId : Int?
+    let vehicleType : String?
+    let vehicleTypeId : Int?
+    let pcType : String?
+    let pcTypeId : Int?
+    
+    enum CodingKeys : String, CodingKey {
+        case mac
+        case name
+        case lastCall
+        case id
+        case lat
+        case lng
+        case operatorName = "operator"
+        case operatorId
+        case trainType
+        case trainNumber
+        case station
+        case stationId
+        case modelType
+        case modelTypeImage
+        case modelTypeId
+        case vehicleType
+        case vehicleTypeId
+        case pcType
+        case pcTypeId
+    }
     
 }
 
