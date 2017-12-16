@@ -9,12 +9,14 @@
 import UIKit
 import MapKit
 import CoreLocation
+//import Cluster
 
 class MapViewController: UIViewController {
 
     let networkHelper = NetworkHelper()
+//    let clusterManager = ClusterManager()
     
-    @IBOutlet weak var slider: UISlider!
+//    @IBOutlet weak var slider: UISlider!
     var minTime : Int?
     var maxTime : Int?
     
@@ -38,12 +40,10 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setupSlider(min: Int?, max: Int?) {
-        guard let mi = min, let mx = max else {
-            return
-        }
-        slider.setValue(0.0, animated: true)
-    }
+//    func setupSlider(min: Int?, max: Int?) {
+//
+//        slider.setValue(0.0, animated: true)
+//    }
 
     @IBAction func valueChanged(_ sender: UISlider) {
         let window = 300
@@ -85,7 +85,8 @@ class MapViewController: UIViewController {
                     self.maxTime = gpsPoints.last?.time
                     
                     DispatchQueue.main.async {
-                        self.valueChanged(self.slider)
+//                        self.valueChanged(self.slider)
+                        self.viewMap.addAnnotations(gpsPoints)
                         UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     }
                     
@@ -102,32 +103,32 @@ class MapViewController: UIViewController {
 
 extension MapViewController : MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "annotation"
-        
-        var view : MKPinAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
-        
-        if view == nil {
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-        }
-        
-        view?.pinTintColor = UIColor(hue: normalizedTimeFor(annotation: annotation), saturation: 1, brightness: 1, alpha: 1)
-        
-//        print(annotation)
-        
-        return view
-    }
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        let identifier = "annotation"
+//
+//        var view : MKPinAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
+//
+//        if view == nil {
+//            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+//        }
+//
+//        view?.pinTintColor = UIColor(hue: normalizedTimeFor(annotation: annotation), saturation: 1, brightness: 1, alpha: 1)
+//
+////        print(annotation)
+//
+//        return view
+//    }
     
-    func normalizedTimeFor(annotation: MKAnnotation) -> CGFloat {
-        
-        guard let point = annotation as? GPSData, let time = point.time, let min = minTime, let max = maxTime else {
-            return 0
-        }
-        
-        let numerator = CGFloat(integerLiteral: time) - CGFloat(integerLiteral: min)
-        let denominator = CGFloat(integerLiteral: max) - CGFloat(integerLiteral: min)
-        
-        return numerator/denominator
-    }
+//    func normalizedTimeFor(annotation: MKAnnotation) -> CGFloat {
+//
+//        guard let point = annotation as? GPSData, let time = point.time, let min = minTime, let max = maxTime else {
+//            return 0
+//        }
+//
+//        let numerator = CGFloat(integerLiteral: time) - CGFloat(integerLiteral: min)
+//        let denominator = CGFloat(integerLiteral: max) - CGFloat(integerLiteral: min)
+//
+//        return numerator/denominator
+//    }
     
 }

@@ -7,7 +7,7 @@ target 'colibri-api' do
 
   # Pods for colibri-api
   pod 'Alamofire', '~> 4.5'
-  pod 'FBAnnotationClusteringSwift'
+  pod "Cluster"
 
   target 'colibri-apiTests' do
     inherit! :search_paths
